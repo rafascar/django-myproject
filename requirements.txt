@@ -4,3 +4,5 @@ djangorestframework
 
 black
 pdbpp
+pytest
+pytest-django

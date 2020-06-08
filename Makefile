@@ -9,6 +9,7 @@ help:
 	@echo 'run ............................... Runs the webserver'
 	@echo 'psql .............................. Run postgresql console'
 	@echo 'start-<name> ...................... Start <name> service'
+	@echo 'test .............................. Run tests with pytest'
 	@echo ''
 
 setup: build migrate
@@ -30,5 +31,8 @@ psql: start-db
 
 start-%:
 	@docker-compose up -d $(@:start-%=%)
+
+test:
+	docker-compose run web pytest
 
 .PHONY: setup
