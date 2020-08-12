@@ -6,3 +6,4 @@ black
 pdbpp
 pytest
 pytest-django
+pgcli
